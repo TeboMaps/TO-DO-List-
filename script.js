@@ -6,22 +6,35 @@ const addTask = ()=>{
 
    if (text) {
     tasks.push({text: text, completed: false});
-
+    taskInput.value = "";
     updateTaskList();
    }
 
 };
 
-const updateTaskList ()=> {
-    const taskList = document.getElementById('task-list')
-    taskList.innerHTML =''
+const updateTaskList = ()=> {
+    const taskList = document.getElementById("task-list")
+    taskList.innerHTML = "";
 
-    tasks.forEach(task =>{
-        const listItem = document.createElement('li')
 
-        //listItem
-    })
-}
+    tasks.forEach((task) =>{
+        const listItem = document.createElement("li")
+
+        listItem.innerHTML = `
+        <div class="taskItem">
+            <div class="task">
+            <input type="checkbox" class="checkbox"/>
+            <p>finish this project</p>
+        </div>
+        <div class="icons">
+       <img src="./images/edit.png" alt=""/>
+       <img src="./images/9713380.png" alt=""/>
+       </div>
+    </div>
+    `;
+
+    });
+};
 
 document.getElementById('newTask').addEventListener('click',function(e){
     e.preventDefault()
