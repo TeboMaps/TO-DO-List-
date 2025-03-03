@@ -27,8 +27,8 @@ const updateTaskList = ()=> {
             <p>finish this project</p>
         </div>
         <div class="icons">
-       <img src="./images/edit.png" alt=""/>
-       <img src="./images/9713380.png" alt=""/>
+       <img src="/images/edit.png" />
+       <img src="/images/9713380.png" />
        </div>
     </div>
     `;
